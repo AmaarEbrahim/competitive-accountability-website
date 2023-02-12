@@ -1,6 +1,6 @@
-import IconButtons from "./createEvent";
+import IconStuff from "./createEvent";
 
-export const Primary = () => <IconButtons />;
+export const Primary = () => <IconStuff />;
 
 export default {
     title: "plusIcon",
