@@ -3,7 +3,7 @@ import { EventData } from "../../modules/EventData";
 import Button from "@mui/material/Button";
 import EventBox, { EventBoxProps } from "./EventBox";
 
-type EventGridProps = {
+export type EventGridProps = {
   events: EventData[];
 };
 
@@ -16,24 +16,16 @@ const EventGrid = (props: EventGridProps) => {
     };
   });
 
-  const eventBoxComponents = eventBoxProps.map((eventBoxProps) => {
-    return <EventBox {...eventBoxProps} />;
+  const eventBoxComponents = eventBoxProps.map((eventBoxProps1, index) => {
+    return (
+      <Grid item sm={4} key={index} padding={"5px"}>
+        <EventBox {...eventBoxProps1} key={index} />
+      </Grid>
+    );
   });
 
   //   return <Grid columns={2}>{eventBoxComponents}</Grid>;
-  return (
-    <Grid container spacing={2}>
-      {/* <Grid item xs={8}> */}
-      {/* <Button>xs=8</Button>
-        <Button>xs=9</Button>
-        <Button>xs=10</Button> */}
-      {eventBoxComponents}
-      {/* </Grid>
-      <Grid item xs={8}>
-        <Button>xs=8</Button>
-      </Grid> */}
-    </Grid>
-  );
+  return <Grid container>{eventBoxComponents}</Grid>;
 };
 
 export default EventGrid;

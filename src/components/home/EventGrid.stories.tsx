@@ -1,20 +1,20 @@
 import { EventData } from "../../modules/EventData";
 import EventGrid from "./EventGrid";
 
-const event1: EventData = {
-  titleText: "First event",
-  description: "Blah blah blah",
-  progressPercentage: 0,
-};
-
-const event2: EventData = {
-  titleText: "Second event",
-  description: "Blah blah blah",
-  progressPercentage: 0,
+const createNEventDatas = (n: number): EventData[] => {
+  const v = new Array<EventData>();
+  for (let i = 0; i < n; i++) {
+    v.push({
+      titleText: "Event " + i,
+      description: "Blah blah blah",
+      progressPercentage: 0,
+    });
+  }
+  return v;
 };
 
 export const Primary = () => {
-  return <EventGrid events={[event1, event2]} />;
+  return <EventGrid events={createNEventDatas(5)} />;
 };
 
 export default {

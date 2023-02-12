@@ -1,8 +1,11 @@
 import Sidebar from "./Sidebar";
+import Grid from "@mui/material/Grid";
 
 export default {
-  title: "Sidebar",
+  title: "SidebarBruh",
   component: <Sidebar />,
 };
 
-export const Primary = () => <Sidebar />;
+export const Primary = () => {
+  return <Sidebar />;
+};
