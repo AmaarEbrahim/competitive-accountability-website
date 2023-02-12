@@ -1,8 +1,8 @@
-import IconStuff from "./createEvent";
+import IconStuff from "./mainMenuIcons";
 
 export const Primary = () => <IconStuff />;
 
 export default {
-    title: "plusIcon",
+    title: "mainMenu Icon",
     component: Primary(),
   };
