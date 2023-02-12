@@ -3,6 +3,6 @@ import DataTable from "./peopletable";
 export const Primary = () => <DataTable />;
 
 export default {
-    title: "mangagerIcon",
+    title: "table",
     component: Primary(),
   };

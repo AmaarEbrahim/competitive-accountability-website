@@ -24,11 +24,18 @@ const columns: GridColDef[] = [
     type: 'boolean',
     width: 90,
   },
+
+  {
+    field: 'score',
+    headerName: 'Score',
+    type :'number',
+    width: 90,
+  },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Schaefer', firstName: 'Caleb', task1: '', task2 : 'F', task3: ''},
-  { id: 2, lastName: 'Kenobi', firstName: 'Obi-one', task1: 'F', task2: '', task3 : 'T'},
+  { id: 1, lastName: 'Schaefer', firstName: 'Caleb', task1: '', task2 : 'F', task3: '', score: 100},
+  { id: 2, lastName: 'Kenobi', firstName: 'Obi-one', task1: 'F', task2: '', task3 : 'T', score: 40},
   
 ];
 
