@@ -1,3 +1,6 @@
+import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material";
+import { ThemeOptions } from "@mui/system";
 import { EventData } from "../../modules/EventData";
 import EventGrid from "./EventGrid";
 
@@ -15,6 +18,22 @@ const createNEventDatas = (n: number): EventData[] => {
 
 export const Primary = () => {
   return <EventGrid events={createNEventDatas(5)} />;
+};
+
+const themeOptions = createTheme({
+  palette: {
+    secondary: {
+      main: "#f50057",
+    },
+  },
+});
+
+export const Secondary = () => {
+  return (
+    <ThemeProvider theme={themeOptions}>
+      <Button sx={{ bgcolor: "secondary.main" }}>Hi</Button>
+    </ThemeProvider>
+  );
 };
 
 export default {

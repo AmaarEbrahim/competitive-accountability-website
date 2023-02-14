@@ -1,4 +1,14 @@
-import { Box, Drawer, Grid, List, ListItem, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  Grid,
+  List,
+  ListItem,
+  Typography,
+  Toolbar,
+} from "@mui/material";
 import EventModule from "../../modules/EventModule";
 import Sidebar from "../common/Sidebar";
 import ManagedEventsGrid from "./ManagedEventsGrid";
@@ -17,11 +27,19 @@ export const HomePage = (props: HomePageProps) => {
       <Grid container>
         <Grid item sm={2}>
           <Sidebar />
+
+          {/* <Sidebar /> */}
         </Grid>
         <Grid item sm={10}>
-          <Typography variant="h3">Events</Typography>
-          <ManagedEventsGrid initialEvents={props.initialEvents} />
-          <ParticipatingEvents initialEvents={props.initialEvents} />
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h6">Events</Typography>
+            </Toolbar>
+          </AppBar>
+          <Box padding={"50px"}>
+            <ManagedEventsGrid initialEvents={props.initialEvents} />
+            <ParticipatingEvents initialEvents={props.initialEvents} />
+          </Box>
         </Grid>
       </Grid>
     </div>
